@@ -73,6 +73,7 @@ console.log(populationTotal);
 for (var i = 0; i < zooAnimals.length; i++) {
   populationTotal.push(zooAnimals[i].population)
 }
+
 console.log(populationTotal.reduce( (accumulator, currentValue ) => accumulator + currentValue, 0));
   
 
