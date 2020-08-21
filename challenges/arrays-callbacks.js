@@ -28,8 +28,8 @@ const animalNames = [];
   zooAnimals.forEach((animal_name, scientific_name) => {
     animalNames.push(`Name: ${animal_name}, Scientific: ${scientific_name}.`);
 
+});
 
-})
 console.log(animalNames)
 
 
