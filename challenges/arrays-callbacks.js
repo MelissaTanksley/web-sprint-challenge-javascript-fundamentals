@@ -39,8 +39,8 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames
-console.log(lowCaseAnimalNames);
+//const lowCaseAnimalNames 
+//console.log(lowCaseAnimalNames);
 
 
 const lowercase = zooAnimals.map(x => x.animal_name.toLowerCase());
@@ -53,8 +53,8 @@ console.log(lowercase);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals 
-console.log(lowPopulationAnimals);
+//const lowPopulationAnimals 
+//console.log(lowPopulationAnimals);
 
 
 const largerPopulation = zooAnimals.filter ((population) => population < 5);
@@ -71,7 +71,7 @@ console.log(populationTotal);
 
 
 for (var i = 0; i < zooAnimals.length; i++) {
-  populationTotal.push( zooAnimals[i].population)
+  populationTotal.push(zooAnimals[i].population)
 }
 console.log(populationTotal.reduce( (accumulator, currentValue ) => accumulator + currentValue, 0));
   
@@ -86,7 +86,7 @@ console.log(populationTotal.reduce( (accumulator, currentValue ) => accumulator 
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
-function consume(arg1, arg2, cb){
+function consume(arg1, arg2, cb) {
   console.log(cb(arg1, arg2));
 }
  
@@ -98,10 +98,25 @@ function consume(arg1, arg2, cb){
 */
 
 
+let add = function(arg1, arg2) {
+  return arg1 + arg2;
+}
+ 
+ 
+let multiply = function(arg1, arg2) {
+  return arg1 * arg2;
+}
+ 
+ 
+let greeting = function(first, last) {
+  return 'Hello ${first} ${last}, nice to meet you!';
+}
+ 
+
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 
