@@ -28,7 +28,7 @@ const animalNames = [];
   zooAnimals.forEach((animal_name, scientific_name) => {
     animalNames.push(`Name: ${animal_name}, Scientific: ${scientific_name}.`);
 
-});
+  });
 
 console.log(animalNames)
 
@@ -71,7 +71,7 @@ console.log(populationTotal);
 
 
 for (var i = 0; i < zooAnimals.length; i++) {
-  populationTotal.push(zooAnimals[i].population)
+  populationTotal.push (zooAnimals[i].population);
 }
 
 console.log(populationTotal.reduce( (accumulator, currentValue ) => accumulator + currentValue, 0));
