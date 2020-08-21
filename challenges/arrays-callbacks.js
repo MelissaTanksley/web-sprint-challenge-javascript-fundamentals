@@ -26,7 +26,7 @@ console.log(displayNames);
 
 const animalNames = [];
   zooAnimals.forEach((animal_name, scientific_name) => {
- animalNames.push(`Name: ${animal_name}, Scientific: ${scientific_name}.`);
+    animalNames.push(`Name: ${animal_name}, Scientific: ${scientific_name}.`);
 
 
 })
@@ -53,11 +53,11 @@ console.log(lowercase);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals
+const lowPopulationAnimals 
 console.log(lowPopulationAnimals);
 
 
-const largerPopulation = zooAnimals.filter ((population) => population < 5)
+const largerPopulation = zooAnimals.filter ((population) => population < 5);
 console.log(largerPopulation);
 
 
@@ -70,6 +70,13 @@ let populationTotal = 0;
 console.log(populationTotal);
 
 
+for (var i = 0; i < zooAnimals.length; i++) {
+  populationTotal.push( zooAnimals[i].population)
+}
+console.log(populationTotal.reduce( (accumulator, currentValue ) => accumulator + currentValue, 0));
+  
+
+
 // ==== Callbacks ====  
 
 /* Step 1: Create a higher-order function
@@ -79,6 +86,10 @@ console.log(populationTotal);
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
+function consume(arg1, arg2, cb){
+  console.log(cb(arg1, arg2));
+}
+ 
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
